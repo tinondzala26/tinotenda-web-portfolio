@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const projects = [
   {
@@ -14,6 +14,8 @@ const projects = [
     className: "bush",
     metric: "31",
     metricLabel: "PRODUCT EXPERIENCES",
+    challenge: "Turn a heritage-inspired safari clothing concept into a modern store that feels premium, practical, and distinctly Southern African.",
+    solution: "A responsive commerce experience with strong product storytelling, clear collections, variant selection, and an editorial visual language.",
   },
   {
     number: "02",
@@ -26,6 +28,8 @@ const projects = [
     className: "whip",
     metric: "24/7",
     metricLabel: "MOBILE-FIRST DISCOVERY",
+    challenge: "Give a mobile detailing business the credibility and clarity needed to turn local interest into qualified enquiries.",
+    solution: "A focused service journey that communicates expertise quickly, makes the offer easy to scan, and keeps conversion actions close at hand.",
   },
   {
     number: "03",
@@ -38,11 +42,26 @@ const projects = [
     className: "neptune",
     metric: "03",
     metricLabel: "CONNECTED RELEASE STORIES",
+    challenge: "Translate the atmosphere of an R&B/Soul release into a digital home that feels immersive without becoming difficult to use.",
+    solution: "A cinematic artist platform combining expressive art direction, release storytelling, and accessible navigation across devices.",
   },
 ];
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState<(typeof projects)[number] | null>(null);
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setActiveProject(null);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    document.body.classList.toggle("modalOpen", Boolean(activeProject));
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+      document.body.classList.remove("modalOpen");
+    };
+  }, [activeProject]);
 
   return (
     <main>
@@ -68,6 +87,16 @@ export default function Home() {
           <span>01</span><span>STRATEGY</span><span>DESIGN</span><span>DEVELOPMENT</span><span>CAPE TOWN · ZA</span>
         </div>
       </section>
+
+      <div className="marquee" aria-label="Services">
+        <div className="marqueeTrack">
+          {[0, 1].map((copy) => (
+            <span key={copy} aria-hidden={copy === 1}>
+              WEB DESIGN <i>✦</i> SOFTWARE ENGINEERING <i>✦</i> STARTUP LAUNCHES <i>✦</i> AI SOLUTIONS <i>✦</i>
+            </span>
+          ))}
+        </div>
+      </div>
 
       <section className="introStrip">
         <span>STRATEGY, DESIGN, SOFTWARE & AI</span>
@@ -106,7 +135,11 @@ export default function Home() {
                 <span className="projectNo">{project.number}</span>
                 <div><span className="eyebrow">{project.type}</span><h3>{project.title}</h3><p>{project.summary}</p>
                   <div className="tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div>
-                  <div className="projectLinks"><a href={project.live} target="_blank" rel="noreferrer">Live project ↗</a><a href={project.source} target="_blank" rel="noreferrer">View code ↗</a></div>
+                  <div className="projectLinks">
+                    <button type="button" onClick={() => setActiveProject(project)}>Read case study ↗</button>
+                    <a href={project.live} target="_blank" rel="noreferrer">View project ↗</a>
+                    <a href={project.source} target="_blank" rel="noreferrer">View code ↗</a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -183,6 +216,28 @@ export default function Home() {
         <div><a href="https://github.com/tinondzala26" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:tinondzala@gmail.com">Email ↗</a></div>
         <span>© 2026 Tinotenda Dzawi</span>
       </footer>
+
+      <a className="floatingCta" href="#contact"><span>Have an idea?</span><b>Let’s talk ↗</b></a>
+
+      {activeProject && (
+        <div className="caseOverlay" role="presentation" onMouseDown={() => setActiveProject(null)}>
+          <article className="caseModal" role="dialog" aria-modal="true" aria-labelledby="caseTitle" onMouseDown={(event) => event.stopPropagation()}>
+            <button className="caseClose" type="button" onClick={() => setActiveProject(null)} aria-label="Close case study">Close ×</button>
+            <span className="caseIndex">{activeProject.number} / CASE STUDY</span>
+            <h2 id="caseTitle">{activeProject.title}</h2>
+            <p className="caseType">{activeProject.type}</p>
+            <div className="caseGrid">
+              <div><span>THE CHALLENGE</span><p>{activeProject.challenge}</p></div>
+              <div><span>THE RESPONSE</span><p>{activeProject.solution}</p></div>
+            </div>
+            <div className="caseTags">{activeProject.stack.map((item) => <span key={item}>{item}</span>)}</div>
+            <div className="caseActions">
+              <a href={activeProject.live} target="_blank" rel="noreferrer">Open project ↗</a>
+              <a href={activeProject.source} target="_blank" rel="noreferrer">Explore code ↗</a>
+            </div>
+          </article>
+        </div>
+      )}
     </main>
   );
 }
