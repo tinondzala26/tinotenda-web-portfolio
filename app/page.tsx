@@ -58,10 +58,10 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="availability"><i /> Available for roles & select projects</div>
-        <h1>Web designer<br />building <em>useful</em><br />digital experiences.</h1>
+        <div className="availability"><i /> Available for startup & AI projects</div>
+        <h1>Designing ideas<br />into <em>useful</em><br />digital products.</h1>
         <div className="heroBottom">
-          <p>I’m <b>Tinotenda Dzawi</b>, a Cape Town–based web designer and developer creating responsive websites where clear thinking, memorable design, and production-ready code meet.</p>
+          <p>I’m <b>Tinotenda Dzawi</b>, a web and software designer helping startups move from early idea to credible product through strategy, standout design, production-ready code, and practical AI.</p>
           <a href="#work" className="roundLink" aria-label="View selected work">↓<span>SELECTED<br />WORK</span></a>
         </div>
         <div className="heroCode" aria-hidden="true">
@@ -70,8 +70,8 @@ export default function Home() {
       </section>
 
       <section className="introStrip">
-        <span>FAST, RESPONSIVE, HUMAN-CENTRED</span>
-        <p>I turn ideas into credible digital products that look sharp, work smoothly, and give people a reason to stay.</p>
+        <span>STRATEGY, DESIGN, SOFTWARE & AI</span>
+        <p>One partner from first sketch to launch—built for ambitious startups that need momentum without sacrificing craft.</p>
       </section>
 
       <section className="audiencePaths">
@@ -119,24 +119,44 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="experience" id="experience">
+        <div className="sectionHead">
+          <span>02 / EXPERIENCE</span>
+          <h2>Built in real<br />product teams.</h2>
+          <p>Engineering discipline and visual thinking, shaped across software and AI-focused environments.</p>
+        </div>
+        <div className="experienceList">
+          <article>
+            <span className="experienceDate">CURRENT</span>
+            <div><h3>NumberBoost</h3><p>Web Designer & Software Engineer</p></div>
+            <p>Designing and engineering high-quality web experiences within a team focused on custom AI systems and better business outcomes.</p>
+          </article>
+          <article>
+            <span className="experienceDate">PREVIOUS</span>
+            <div><h3>Commvault</h3><p>Junior Software Engineer</p></div>
+            <p>Developed an early-career foundation in production software, collaborative engineering, technical problem-solving, and reliable delivery.</p>
+          </article>
+        </div>
+      </section>
+
       <section className="capabilities" id="services">
-        <div className="sectionHead light"><span>02 / CAPABILITIES</span><h2>From blank page<br />to live product.</h2></div>
+        <div className="sectionHead light"><span>03 / STARTUP SERVICES</span><h2>From blank page<br />to live product.</h2></div>
         <div className="capGrid">
-          <article><span>01</span><h3>Frontend development</h3><p>Responsive, accessible interfaces built with React, TypeScript, modern CSS, and a sharp eye for detail.</p><b>React · TypeScript · HTML · CSS</b></article>
-          <article><span>02</span><h3>Website design</h3><p>Clear visual systems, intuitive layouts, and brand-led interactions that feel considered on every screen.</p><b>UX/UI · Responsive design · Prototyping</b></article>
-          <article><span>03</span><h3>Digital strategy</h3><p>Turning business goals into focused site structures, useful customer journeys, and measurable calls to action.</p><b>Discovery · Content · Conversion</b></article>
-          <article><span>04</span><h3>Launch & iteration</h3><p>Production-ready builds, deployment, performance checks, and practical improvements after launch.</p><b>GitHub · Cloud deployment · QA</b></article>
+          <article><span>01</span><h3>Startup launch</h3><p>Positioning, product storytelling, landing pages, and fast MVPs that turn an early idea into something credible and testable.</p><b>Discovery · MVP · Go-to-market</b></article>
+          <article><span>02</span><h3>Web design</h3><p>Distinctive visual systems and responsive, accessible experiences that make the product easy to understand and trust.</p><b>UX/UI · Prototyping · Design systems</b></article>
+          <article><span>03</span><h3>Software engineering</h3><p>Production-ready frontend and full-stack builds with clean foundations that can grow beyond the first release.</p><b>React · TypeScript · Python · APIs</b></article>
+          <article><span>04</span><h3>AI solutions</h3><p>Practical AI features and workflows designed around a real business problem—not technology for its own sake.</p><b>AI integration · Automation · Prototyping</b></article>
         </div>
       </section>
 
       <section className="about" id="about">
-        <div className="aboutLabel">03 / ABOUT</div>
+        <div className="aboutLabel">04 / ABOUT</div>
         <div className="aboutCopy">
           <h2>A developer who cares how the whole thing feels.</h2>
-          <p className="lead">I work across code, design, content, and product thinking—because the strongest websites are not assembled in separate rooms.</p>
+          <p className="lead">I work across code, design, content, product thinking, and AI—because strong digital products are not assembled in separate rooms.</p>
           <div className="aboutColumns">
-            <p>Based in Cape Town and working with clients anywhere, I help founders, artists, and growing businesses turn rough ideas into credible digital experiences.</p>
-            <p>My approach is direct: understand the real goal, remove what gets in the way, build with care, and ship something people can actually use.</p>
+            <p>Working from South Africa with teams anywhere, I help founders and growing businesses turn rough ideas into focused, credible digital products.</p>
+            <p>My approach is direct: understand the business goal, reduce the noise, design with intent, engineer with care, and ship something people can use.</p>
           </div>
           <a href="https://github.com/tinondzala26" target="_blank" rel="noreferrer" className="textLink">Explore my GitHub ↗</a>
         </div>
