@@ -162,13 +162,45 @@ export default function Home() {
           <article>
             <span className="experienceDate">CURRENT</span>
             <div><h3>NumberBoost</h3><p>Web Designer & Software Engineer</p></div>
-            <p>Designing and engineering high-quality web experiences within a team focused on custom AI systems and better business outcomes.</p>
+            <p>Designing and engineering web experiences for a team delivering custom AI systems, including work connected to automotive inspection, geospatial analytics, and customer intelligence.</p>
           </article>
           <article>
             <span className="experienceDate">PREVIOUS</span>
             <div><h3>Commvault</h3><p>Junior Software Engineer</p></div>
             <p>Developed an early-career foundation in production software, collaborative engineering, technical problem-solving, and reliable delivery.</p>
           </article>
+        </div>
+        <div className="numberboostWork">
+          <div className="numberboostIntro">
+            <span>SELECTED NUMBERBOOST CONTRIBUTIONS</span>
+            <p>Team contributions presented alongside NumberBoost’s public project record. Client outcomes and awards are attributed to the company; contribution statements describe my role within that work.</p>
+          </div>
+          <div className="contributionGrid">
+            <article>
+              <span>01 / COMPUTER VISION</span>
+              <h3>Mercedes-Benz</h3>
+              <p>Contributed to project work connected to NumberBoost’s AI system for detecting vehicle dents and scratches from images. NumberBoost publicly records the project as a Mercedes-Benz innovation competition winner.</p>
+              <a href="https://www.numberboost.com/" target="_blank" rel="noreferrer">Verify company record ↗</a>
+            </article>
+            <article>
+              <span>02 / GEOSPATIAL ML</span>
+              <h3>MultiChoice</h3>
+              <p>Contributed to work around NumberBoost’s geospatial machine-learning analytics capability. NumberBoost publicly lists the system as the winner of a MultiChoice innovation challenge.</p>
+              <a href="https://www.numberboost.com/" target="_blank" rel="noreferrer">Verify company record ↗</a>
+            </article>
+            <article>
+              <span>03 / CUSTOMER INTELLIGENCE</span>
+              <h3>Customer analytics</h3>
+              <p>Contributed to customer-analytics work involving churn, lifetime-value, and deactivation modelling—capabilities included in NumberBoost’s published project portfolio.</p>
+              <a href="https://za.linkedin.com/company/numberboost" target="_blank" rel="noreferrer">View public project list ↗</a>
+            </article>
+            <article className="hackathonCard">
+              <span>04 / APPLIED PROBLEM-SOLVING</span>
+              <h3>3 hackathons.<br />1 top placement.</h3>
+              <p>Participated in three hackathons and earned a top placement in one, applying rapid prototyping, collaborative engineering, and product thinking under time constraints.</p>
+              <b>PERSONAL COMPETITION RECORD</b>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -195,7 +227,8 @@ export default function Home() {
         </div>
         <aside className="facts">
           <div><b>03</b><span>LIVE PROJECTS</span></div>
-          <div><b>04+</b><span>CORE TECHNOLOGIES</span></div>
+          <div><b>03</b><span>HACKATHONS ENTERED</span></div>
+          <div><b>01</b><span>TOP PLACEMENT</span></div>
           <div><b>ZA</b><span>BASED IN CAPE TOWN</span></div>
         </aside>
       </section>
