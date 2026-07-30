@@ -11,6 +11,7 @@ const projects = [
     stack: ["TypeScript", "React", "Vinext", "Responsive UI"],
     live: "https://bushman.tinotendadzawi.com",
     appLive: "",
+    appSource: "",
     source: "https://github.com/tinondzala26/bush-man-safari",
     className: "bush",
     metric: "31",
@@ -28,6 +29,7 @@ const projects = [
     stack: ["TypeScript", "React", "CSS", "Product Design"],
     live: "https://whipklean.tinotendadzawi.com",
     appLive: "https://whipklean.tinotendadzawi.com/smart-scan/",
+    appSource: "https://github.com/tinondzala26/whipklean-mobile-detailing/tree/main/app/smart-scan",
     source: "https://github.com/tinondzala26/whipklean-mobile-detailing",
     className: "whip",
     metric: "03",
@@ -45,6 +47,7 @@ const projects = [
     stack: ["HTML", "TypeScript", "CSS", "Creative Direction"],
     live: "https://saintlucid.online",
     appLive: "",
+    appSource: "",
     source: "https://github.com/tinondzala26/saint-lucid-neptune",
     className: "neptune",
     metric: "03",
@@ -162,6 +165,7 @@ export default function Home() {
                     <button type="button" onClick={() => setActiveProject(project)}>Read case study ↗</button>
                     <a href={project.live} target="_blank" rel="noreferrer">View project ↗</a>
                     {project.appLive && <a href={project.appLive} target="_blank" rel="noreferrer">Open app ↗</a>}
+                    {project.appSource && <a href={project.appSource} target="_blank" rel="noreferrer">View app code ↗</a>}
                     <a href={project.source} target="_blank" rel="noreferrer">View code ↗</a>
                   </div>
                 </div>
@@ -293,6 +297,7 @@ export default function Home() {
             <div className="caseActions">
               <a href={activeProject.live} target="_blank" rel="noreferrer">Open project ↗</a>
               {activeProject.appLive && <a href={activeProject.appLive} target="_blank" rel="noreferrer">Open app ↗</a>}
+              {activeProject.appSource && <a href={activeProject.appSource} target="_blank" rel="noreferrer">View app code ↗</a>}
               <a href={activeProject.source} target="_blank" rel="noreferrer">Explore code ↗</a>
             </div>
           </article>
