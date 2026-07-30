@@ -29,7 +29,7 @@ const projects = [
     stack: ["TypeScript", "React", "CSS", "Product Design"],
     live: "https://whipklean.tinotendadzawi.com",
     appLive: "https://whipklean.tinotendadzawi.com/smart-scan/",
-    appSource: "https://github.com/tinondzala26/whipklean-mobile-detailing/tree/main/app/smart-scan",
+    appSource: "https://github.com/tinondzala26/whipklean-mobile-detailing/blob/main/app/smart-scan/page.tsx",
     source: "https://github.com/tinondzala26/whipklean-mobile-detailing",
     className: "whip",
     metric: "03",
