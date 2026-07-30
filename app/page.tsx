@@ -20,13 +20,15 @@ const projects = [
     solution: "A responsive commerce experience with strong product storytelling, clear collections, variant selection, and an editorial visual language.",
     outcome: "A complete, mobile-first storefront that gives the brand a credible platform for product discovery, customer trust, and future commerce growth.",
     engineering: "Reusable React components, responsive product states, accessible interactions, and a deployment setup designed for straightforward iteration.",
+    role: "Product design · Frontend engineering · Deployment",
+    proof: ["Responsive storefront", "Interactive variants and cart", "Live custom domain"],
   },
   {
     number: "02",
     title: "WhipKlean",
     type: "Service Business · Automotive",
     summary: "A polished lead-generation platform and Smart Intake app for mobile vehicle detailing, designed to communicate trust and turn vehicle details into a clear booking brief.",
-    stack: ["TypeScript", "React", "CSS", "Product Design"],
+    stack: ["TypeScript", "React", "Next.js", "Tesseract.js"],
     live: "https://whipklean.tinotendadzawi.com",
     appLive: "https://whipklean.tinotendadzawi.com/smart-scan/",
     appSource: "https://github.com/tinondzala26/whipklean-mobile-detailing/blob/main/app/smart-scan/page.tsx",
@@ -37,7 +39,9 @@ const projects = [
     challenge: "Vehicle-detailing customers often struggle to describe a vehicle’s condition clearly enough for an accurate mobile-service enquiry.",
     solution: "A guided three-photo intake combines vehicle, service, condition, and location details into a reviewable booking brief while keeping photos on the customer’s device.",
     outcome: "A clearer enquiry journey with useful preparation for the customer and better job context before WhipKlean follows up.",
-    engineering: "Mobile camera capture, local image previews, responsive form states, completion tracking, privacy-conscious handling, and a fully static deployment.",
+    engineering: "Secure-context camera access, guided capture states, on-device OCR, editable extracted fields, consent handling, failure fallback, and static deployment.",
+    role: "Product design · Frontend engineering · OCR integration",
+    proof: ["Live camera capture", "On-device OCR", "Human review before submission"],
   },
   {
     number: "03",
@@ -56,6 +60,8 @@ const projects = [
     solution: "A cinematic artist platform combining expressive art direction, release storytelling, and accessible navigation across devices.",
     outcome: "A focused release destination that gives the artist a distinctive identity while keeping music, story, and navigation easy to access on any screen.",
     engineering: "Responsive layout systems, performance-conscious visual effects, semantic content structure, and interaction design that respects reduced-motion preferences.",
+    role: "Creative direction · Frontend engineering · Deployment",
+    proof: ["Responsive artist platform", "Reduced-motion support", "Live custom domain"],
   },
 ];
 
@@ -83,20 +89,20 @@ export default function Home() {
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Capabilities</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a className="navCta" href="#contact">Work with me ↗</a>
+          <a className="navCta" href="#contact">Discuss a role ↗</a>
         </div>
         <button className="menuButton" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? "×" : "Menu"}</button>
       </nav>
 
       <section className="hero" id="top">
-        <div className="availability"><i /> Available for startup & AI projects</div>
-        <h1>Designing ideas<br />into <em>useful</em><br />digital products.</h1>
+        <div className="availability"><i /> Open to software engineering opportunities</div>
+        <h1>Software engineering<br />with <em>product</em><br />judgement.</h1>
         <div className="heroBottom">
-          <p>I’m <b>Tinotenda Dzawi</b>, a web and software designer helping startups move from early idea to credible product through strategy, standout design, production-ready code, and practical AI.</p>
+          <p>I’m <b>Tinotenda Dzawi</b>, a software engineer and product designer in Cape Town. I build responsive web products, translate ambiguous requirements into usable interfaces, and integrate practical automation with clear human review.</p>
           <a href="#work" className="roundLink" aria-label="View selected work">↓<span>SELECTED<br />WORK</span></a>
         </div>
         <div className="heroCode" aria-hidden="true">
-          <span>01</span><span>STRATEGY</span><span>DESIGN</span><span>DEVELOPMENT</span><span>CAPE TOWN · ZA</span>
+          <span>01</span><span>TYPESCRIPT</span><span>REACT</span><span>PRODUCT ENGINEERING</span><span>CAPE TOWN · ZA</span>
         </div>
       </section>
 
@@ -111,16 +117,16 @@ export default function Home() {
       </div>
 
       <section className="introStrip">
-        <span>STRATEGY, DESIGN, SOFTWARE & AI</span>
-        <p>One partner from first sketch to launch—built for ambitious startups that need momentum without sacrificing craft.</p>
+        <span>SOFTWARE ENGINEER · PRODUCT DESIGNER</span>
+        <p>I combine engineering execution with design judgement—useful when a team needs someone who can understand the problem, build the interface, and ship the result.</p>
       </section>
 
       <section className="audiencePaths">
         <article>
           <span>FOR HIRING TEAMS</span>
-          <h2>A designer who can ship.</h2>
-          <p>I bring visual judgement, frontend execution, and product thinking into one practical workflow—useful for teams that need ideas turned into finished experiences.</p>
-          <a href="mailto:tinondzala@gmail.com?subject=Web%20design%20role">Discuss a role ↗</a>
+          <h2>An engineer who understands the user.</h2>
+          <p>My strongest fit is a frontend, product-engineering, or junior software-engineering role where typed interfaces, responsive UI, API integration, and thoughtful delivery matter.</p>
+          <a href="mailto:tinondzala@gmail.com?subject=Software%20engineering%20opportunity">Discuss a role ↗</a>
         </article>
         <article>
           <span>FOR FOUNDERS & CLIENTS</span>
@@ -128,6 +134,13 @@ export default function Home() {
           <p>From positioning and page structure to responsive design and deployment, I build websites that help serious businesses look established and convert attention.</p>
           <a href="mailto:tinondzala@gmail.com?subject=New%20web%20design%20project">Start a project ↗</a>
         </article>
+      </section>
+
+      <section className="recruiterSnapshot" aria-label="Recruiter snapshot">
+        <div><span>CURRENT ROLE</span><b>Software Engineer & Web Designer</b><small>NumberBoost</small></div>
+        <div><span>PREVIOUS</span><b>Junior Software Engineer</b><small>Commvault</small></div>
+        <div><span>CORE STACK</span><b>TypeScript · React · Next.js</b><small>Responsive product interfaces</small></div>
+        <div><span>LOCATION</span><b>Cape Town, South Africa</b><small>Open to remote and hybrid roles</small></div>
       </section>
 
       <section className="solutionMethod" id="method">
@@ -144,8 +157,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="engineeringProof" id="engineering-proof">
+        <div className="proofHeading">
+          <span>02 / ENGINEERING PROOF</span>
+          <h2>A live feature,<br />explained honestly.</h2>
+          <p>WhipKlean’s Vehicle Scan is the clearest example of how I approach an applied automation problem: guide the input, process locally where possible, expose uncertainty, and keep the person in control.</p>
+        </div>
+        <div className="proofFlow" aria-label="WhipKlean vehicle scan architecture">
+          <article><span>01 / INPUT</span><h3>Guided camera capture</h3><p>Three purpose-specific camera views for the vehicle, licence disc, and number plate, with retakes and file-upload fallback.</p></article>
+          <article><span>02 / PROCESSING</span><h3>On-device text reading</h3><p>Tesseract.js processes disc and plate images in the browser so the prototype does not require a customer-photo upload service.</p></article>
+          <article><span>03 / REVIEW</span><h3>Editable structured fields</h3><p>Registration, VIN, owner, make/model, and colour remain editable because OCR output can be incomplete or incorrect.</p></article>
+          <article><span>04 / FAILURE PATH</span><h3>No silent guessing</h3><p>If extraction fails, the interface asks for a clearer photo or manual entry instead of presenting uncertain data as fact.</p></article>
+        </div>
+        <div className="proofHandoff">
+          <div><span>WHAT IS LIVE</span><p>Camera access, guided captures, local OCR, consent, editable results, responsive states, HTTPS, and a public source repository.</p></div>
+          <div><span>CURRENT LIMIT</span><p>This is a frontend prototype: it does not query an official owner database or persist bookings. A production version would add a secured backend, audit trail, tests, and lawful data-source integration.</p></div>
+          <div className="proofLinks"><a href="https://whipklean.tinotendadzawi.com/smart-scan/" target="_blank" rel="noreferrer">Open live app ↗</a><a href="https://github.com/tinondzala26/whipklean-mobile-detailing/blob/main/app/smart-scan/page.tsx" target="_blank" rel="noreferrer">Review source ↗</a></div>
+        </div>
+      </section>
+
       <section className="work" id="work">
-        <div className="sectionHead"><span>02 / SELECTED WORK</span><h2>Proof, not promises.</h2><p>Three different industries. One consistent focus: thoughtful experiences built to perform.</p></div>
+        <div className="sectionHead"><span>03 / SELECTED WORK</span><h2>Products you can open.</h2><p>Each project includes a live deployment, public source, my role, and the engineering decisions behind it.</p></div>
         <div className="projectList">
           {projects.map((project) => (
             <article className="project" key={project.title}>
@@ -159,7 +191,7 @@ export default function Home() {
               </div>
               <div className="projectInfo">
                 <span className="projectNo">{project.number}</span>
-                <div><span className="eyebrow">{project.type}</span><h3>{project.title}</h3><p>{project.summary}</p>
+                <div><span className="eyebrow">{project.type}</span><h3>{project.title}</h3><p>{project.summary}</p><p className="projectRole"><b>MY ROLE</b>{project.role}</p>
                   <div className="tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div>
                   <div className="projectLinks">
                     <button type="button" onClick={() => setActiveProject(project)}>Read case study ↗</button>
@@ -174,15 +206,15 @@ export default function Home() {
           ))}
         </div>
         <div className="githubProof">
-          <div><span>GITHUB PROFILE</span><b>03 public case-study repositories</b></div>
-          <div><span>WORKING ACROSS</span><b>TypeScript · React · Python · HTML · CSS</b></div>
+          <div><span>GITHUB PROFILE</span><b>04 public project repositories</b></div>
+          <div><span>WORKING ACROSS</span><b>TypeScript · React · Next.js · HTML · CSS</b></div>
           <a href="https://github.com/tinondzala26" target="_blank" rel="noreferrer">Review the code ↗</a>
         </div>
       </section>
 
       <section className="experience" id="experience">
         <div className="sectionHead">
-          <span>03 / EXPERIENCE</span>
+          <span>04 / EXPERIENCE</span>
           <h2>Built in real<br />product teams.</h2>
           <p>Engineering discipline and visual thinking, shaped across software and AI-focused environments.</p>
         </div>
@@ -233,17 +265,17 @@ export default function Home() {
       </section>
 
       <section className="capabilities" id="services">
-        <div className="sectionHead light"><span>04 / STARTUP SERVICES</span><h2>From blank page<br />to live product.</h2></div>
+        <div className="sectionHead light"><span>05 / TECHNICAL CAPABILITIES</span><h2>Useful across<br />the product cycle.</h2></div>
         <div className="capGrid">
-          <article><span>01</span><h3>Startup launch</h3><p>Positioning, product storytelling, landing pages, and fast MVPs that turn an early idea into something credible and testable.</p><b>Discovery · MVP · Go-to-market</b></article>
-          <article><span>02</span><h3>Web design</h3><p>Distinctive visual systems and responsive, accessible experiences that make the product easy to understand and trust.</p><b>UX/UI · Prototyping · Design systems</b></article>
-          <article><span>03</span><h3>Software engineering</h3><p>Production-ready frontend and full-stack builds with clean foundations that can grow beyond the first release.</p><b>React · TypeScript · Python · APIs</b></article>
-          <article><span>04</span><h3>AI solutions</h3><p>Practical AI features and workflows designed around a real business problem—not technology for its own sake.</p><b>AI integration · Automation · Prototyping</b></article>
+          <article><span>01</span><h3>Frontend engineering</h3><p>Responsive component systems, typed UI states, accessibility, browser APIs, and interfaces that remain understandable when something fails.</p><b>React · TypeScript · Next.js</b></article>
+          <article><span>02</span><h3>Product design</h3><p>User flows, visual hierarchy, responsive behaviour, prototypes, and design decisions tied to a specific business or user problem.</p><b>UX/UI · Prototyping · Design systems</b></article>
+          <article><span>03</span><h3>Integration</h3><p>Connecting browser capabilities and third-party libraries to real workflows, with validation and clear boundaries around uncertainty.</p><b>Browser APIs · OCR · Structured data</b></article>
+          <article><span>04</span><h3>Delivery</h3><p>Turning scoped requirements into deployed products with source control, custom domains, HTTPS, responsive QA, and maintainable iteration.</p><b>GitHub · Deployment · Debugging</b></article>
         </div>
       </section>
 
       <section className="about" id="about">
-        <div className="aboutLabel">05 / ABOUT</div>
+        <div className="aboutLabel">06 / ABOUT</div>
         <div className="aboutCopy">
           <h2>A developer who cares how the whole thing feels.</h2>
           <p className="lead">I work across code, design, content, product thinking, and AI—because strong digital products are not assembled in separate rooms.</p>
@@ -254,7 +286,7 @@ export default function Home() {
           <a href="https://github.com/tinondzala26" target="_blank" rel="noreferrer" className="textLink">Explore my GitHub ↗</a>
         </div>
         <aside className="facts">
-          <div><b>03</b><span>LIVE PROJECTS</span></div>
+          <div><b>04</b><span>PUBLIC REPOSITORIES</span></div>
           <div><b>03</b><span>HACKATHONS ENTERED</span></div>
           <div><b>01</b><span>TOP PLACEMENT</span></div>
           <div><b>ZA</b><span>BASED IN CAPE TOWN</span></div>
@@ -267,13 +299,13 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contact">
-        <span>HIRING, BUILDING, OR STARTING SOMETHING NEW?</span>
-        <h2>Let’s build something<br /><em>worth opening.</em></h2>
+        <span>HIRING FOR FRONTEND, PRODUCT, OR SOFTWARE ENGINEERING?</span>
+        <h2>I’m ready for the<br /><em>technical conversation.</em></h2>
         <a href="mailto:tinondzala@gmail.com">tinondzala@gmail.com <b>↗</b></a>
       </section>
 
       <footer>
-        <div><b>TD®</b><span>WEB DESIGNER & DEVELOPER · CAPE TOWN</span></div>
+        <div><b>TD®</b><span>SOFTWARE ENGINEER & PRODUCT DESIGNER · CAPE TOWN</span></div>
         <div><a href="https://github.com/tinondzala26" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:tinondzala@gmail.com">Email ↗</a></div>
         <span>© 2026 Tinotenda Dzawi</span>
       </footer>
@@ -287,12 +319,14 @@ export default function Home() {
             <span className="caseIndex">{activeProject.number} / CASE STUDY</span>
             <h2 id="caseTitle">{activeProject.title}</h2>
             <p className="caseType">{activeProject.type}</p>
+            <p className="caseRole"><b>MY ROLE</b>{activeProject.role}</p>
             <div className="caseGrid">
               <div><span>THE CHALLENGE</span><p>{activeProject.challenge}</p></div>
               <div><span>THE RESPONSE</span><p>{activeProject.solution}</p></div>
               <div><span>THE OUTCOME</span><p>{activeProject.outcome}</p></div>
               <div><span>ENGINEERING DECISIONS</span><p>{activeProject.engineering}</p></div>
             </div>
+            <div className="caseProof">{activeProject.proof.map((item) => <span key={item}>✓ {item}</span>)}</div>
             <div className="caseTags">{activeProject.stack.map((item) => <span key={item}>{item}</span>)}</div>
             <div className="caseActions">
               <a href={activeProject.live} target="_blank" rel="noreferrer">Open project ↗</a>
