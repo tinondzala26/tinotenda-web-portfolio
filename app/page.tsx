@@ -16,20 +16,24 @@ const projects = [
     metricLabel: "PRODUCT EXPERIENCES",
     challenge: "Turn a heritage-inspired safari clothing concept into a modern store that feels premium, practical, and distinctly Southern African.",
     solution: "A responsive commerce experience with strong product storytelling, clear collections, variant selection, and an editorial visual language.",
+    outcome: "A complete, mobile-first storefront that gives the brand a credible platform for product discovery, customer trust, and future commerce growth.",
+    engineering: "Reusable React components, responsive product states, accessible interactions, and a deployment setup designed for straightforward iteration.",
   },
   {
     number: "02",
     title: "WhipKlean",
     type: "Service Business · Automotive",
-    summary: "A polished lead-generation platform for mobile vehicle detailing, designed to communicate trust, service depth, and corrosion-conscious expertise.",
-    stack: ["TypeScript", "Python", "CSS", "UX Strategy"],
+    summary: "A mobile detailing platform with a three-photo Smart Vehicle Scan that extracts visible vehicle details, reduces form entry, and keeps the customer in control of sensitive information.",
+    stack: ["TypeScript", "Vision API", "Structured Data", "Privacy-first UX"],
     live: "https://whipklean.tinotendadzawi.com",
     source: "https://github.com/tinondzala26/whipklean-mobile-detailing",
     className: "whip",
-    metric: "24/7",
-    metricLabel: "MOBILE-FIRST DISCOVERY",
-    challenge: "Give a mobile detailing business the credibility and clarity needed to turn local interest into qualified enquiries.",
-    solution: "A focused service journey that communicates expertise quickly, makes the offer easy to scan, and keeps conversion actions close at hand.",
+    metric: "03",
+    metricLabel: "PHOTOS TO START A QUOTE",
+    challenge: "Vehicle-detailing customers repeatedly type information that is already visible on their car, plate, and licence disk—creating friction before a quote even begins.",
+    solution: "A consent-led capture flow reads the three images, returns structured vehicle and owner fields, highlights uncertain readings, and lets the customer review everything before prefilling the quote.",
+    outcome: "A faster booking journey with less repetitive typing, clearer vehicle information for the business, and a practical safeguard against silently accepting incorrect extracted data.",
+    engineering: "Mobile camera capture, image previews, typed extraction results, structured model output, file validation, graceful API failures, editable fields, and explicit privacy consent.",
   },
   {
     number: "03",
@@ -44,6 +48,8 @@ const projects = [
     metricLabel: "CONNECTED RELEASE STORIES",
     challenge: "Translate the atmosphere of an R&B/Soul release into a digital home that feels immersive without becoming difficult to use.",
     solution: "A cinematic artist platform combining expressive art direction, release storytelling, and accessible navigation across devices.",
+    outcome: "A focused release destination that gives the artist a distinctive identity while keeping music, story, and navigation easy to access on any screen.",
+    engineering: "Responsive layout systems, performance-conscious visual effects, semantic content structure, and interaction design that respects reduced-motion preferences.",
   },
 ];
 
@@ -118,8 +124,22 @@ export default function Home() {
         </article>
       </section>
 
+      <section className="solutionMethod" id="method">
+        <div className="sectionHead">
+          <span>01 / AI SOLUTION METHOD</span>
+          <h2>Start with the friction.<br />Then choose the technology.</h2>
+          <p>I design AI features around an observable business problem, with clear inputs, reviewable outputs, and a fallback when automation is uncertain.</p>
+        </div>
+        <div className="methodGrid">
+          <article><span>01</span><h3>Frame</h3><p>Define the user, the repetitive task, the cost of the problem, and what a useful result must contain.</p></article>
+          <article><span>02</span><h3>Design</h3><p>Map consent, input quality, failure states, human review, and the shortest path to a trustworthy outcome.</p></article>
+          <article><span>03</span><h3>Engineer</h3><p>Build typed interfaces, structured outputs, validation, API boundaries, and secure handling for sensitive data.</p></article>
+          <article><span>04</span><h3>Evaluate</h3><p>Test realistic edge cases, inspect uncertain outputs, measure user friction, and improve the workflow—not just the prompt.</p></article>
+        </div>
+      </section>
+
       <section className="work" id="work">
-        <div className="sectionHead"><span>01 / SELECTED WORK</span><h2>Proof, not promises.</h2><p>Three different industries. One consistent focus: thoughtful experiences built to perform.</p></div>
+        <div className="sectionHead"><span>02 / SELECTED WORK</span><h2>Proof, not promises.</h2><p>Three different industries. One consistent focus: thoughtful experiences built to perform.</p></div>
         <div className="projectList">
           {projects.map((project) => (
             <article className="project" key={project.title}>
@@ -154,7 +174,7 @@ export default function Home() {
 
       <section className="experience" id="experience">
         <div className="sectionHead">
-          <span>02 / EXPERIENCE</span>
+          <span>03 / EXPERIENCE</span>
           <h2>Built in real<br />product teams.</h2>
           <p>Engineering discipline and visual thinking, shaped across software and AI-focused environments.</p>
         </div>
@@ -205,7 +225,7 @@ export default function Home() {
       </section>
 
       <section className="capabilities" id="services">
-        <div className="sectionHead light"><span>03 / STARTUP SERVICES</span><h2>From blank page<br />to live product.</h2></div>
+        <div className="sectionHead light"><span>04 / STARTUP SERVICES</span><h2>From blank page<br />to live product.</h2></div>
         <div className="capGrid">
           <article><span>01</span><h3>Startup launch</h3><p>Positioning, product storytelling, landing pages, and fast MVPs that turn an early idea into something credible and testable.</p><b>Discovery · MVP · Go-to-market</b></article>
           <article><span>02</span><h3>Web design</h3><p>Distinctive visual systems and responsive, accessible experiences that make the product easy to understand and trust.</p><b>UX/UI · Prototyping · Design systems</b></article>
@@ -215,7 +235,7 @@ export default function Home() {
       </section>
 
       <section className="about" id="about">
-        <div className="aboutLabel">04 / ABOUT</div>
+        <div className="aboutLabel">05 / ABOUT</div>
         <div className="aboutCopy">
           <h2>A developer who cares how the whole thing feels.</h2>
           <p className="lead">I work across code, design, content, product thinking, and AI—because strong digital products are not assembled in separate rooms.</p>
@@ -262,6 +282,8 @@ export default function Home() {
             <div className="caseGrid">
               <div><span>THE CHALLENGE</span><p>{activeProject.challenge}</p></div>
               <div><span>THE RESPONSE</span><p>{activeProject.solution}</p></div>
+              <div><span>THE OUTCOME</span><p>{activeProject.outcome}</p></div>
+              <div><span>ENGINEERING DECISIONS</span><p>{activeProject.engineering}</p></div>
             </div>
             <div className="caseTags">{activeProject.stack.map((item) => <span key={item}>{item}</span>)}</div>
             <div className="caseActions">
