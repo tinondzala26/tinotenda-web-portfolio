@@ -15,7 +15,3 @@ Personal portfolio for Tinotenda Dzawi, a product engineer combining design, sof
 - `pnpm lint` checks the source.
 
 The portfolio is built with React, TypeScript, and modern CSS.
-
-## Interview preparation
-
-See [INTERVIEW_PREP.md](./INTERVIEW_PREP.md) for the WhipKlean case-study narrative, likely technical questions, and concise answer frameworks.
