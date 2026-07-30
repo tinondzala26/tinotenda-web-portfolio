@@ -10,6 +10,7 @@ const projects = [
     summary: "A conversion-focused safari fashion store with responsive product discovery, live variants, sizing, cart interactions, and a distinctive South African identity.",
     stack: ["TypeScript", "React", "Vinext", "Responsive UI"],
     live: "https://bushman.tinotendadzawi.com",
+    appLive: "",
     source: "https://github.com/tinondzala26/bush-man-safari",
     className: "bush",
     metric: "31",
@@ -23,17 +24,18 @@ const projects = [
     number: "02",
     title: "WhipKlean",
     type: "Service Business · Automotive",
-    summary: "A mobile detailing platform with a three-photo Smart Vehicle Scan that extracts visible vehicle details, reduces form entry, and keeps the customer in control of sensitive information.",
-    stack: ["TypeScript", "Vision API", "Structured Data", "Privacy-first UX"],
+    summary: "A polished lead-generation platform and Smart Intake app for mobile vehicle detailing, designed to communicate trust and turn vehicle details into a clear booking brief.",
+    stack: ["TypeScript", "React", "CSS", "Product Design"],
     live: "https://whipklean.tinotendadzawi.com",
-    source: "https://github.com/tinondzala26/whipklean-mobile-detailing/tree/smart-scan-app",
+    appLive: "https://whipklean.tinotendadzawi.com/smart-scan/",
+    source: "https://github.com/tinondzala26/whipklean-mobile-detailing",
     className: "whip",
     metric: "03",
     metricLabel: "PHOTOS TO START A QUOTE",
-    challenge: "Vehicle-detailing customers repeatedly type information that is already visible on their car, plate, and licence disk—creating friction before a quote even begins.",
-    solution: "A consent-led capture flow reads the three images, returns structured vehicle and owner fields, highlights uncertain readings, and lets the customer review everything before prefilling the quote.",
-    outcome: "A faster booking journey with less repetitive typing, clearer vehicle information for the business, and a practical safeguard against silently accepting incorrect extracted data.",
-    engineering: "Mobile camera capture, image previews, typed extraction results, structured model output, file validation, graceful API failures, editable fields, and explicit privacy consent.",
+    challenge: "Vehicle-detailing customers often struggle to describe a vehicle’s condition clearly enough for an accurate mobile-service enquiry.",
+    solution: "A guided three-photo intake combines vehicle, service, condition, and location details into a reviewable booking brief while keeping photos on the customer’s device.",
+    outcome: "A clearer enquiry journey with useful preparation for the customer and better job context before WhipKlean follows up.",
+    engineering: "Mobile camera capture, local image previews, responsive form states, completion tracking, privacy-conscious handling, and a fully static deployment.",
   },
   {
     number: "03",
@@ -42,6 +44,7 @@ const projects = [
     summary: "An immersive artist website for the Neptune EP, translating an R&B/Soul identity into an atmospheric, accessible digital experience.",
     stack: ["HTML", "TypeScript", "CSS", "Creative Direction"],
     live: "https://saintlucid.online",
+    appLive: "",
     source: "https://github.com/tinondzala26/saint-lucid-neptune",
     className: "neptune",
     metric: "03",
@@ -158,6 +161,7 @@ export default function Home() {
                   <div className="projectLinks">
                     <button type="button" onClick={() => setActiveProject(project)}>Read case study ↗</button>
                     <a href={project.live} target="_blank" rel="noreferrer">View project ↗</a>
+                    {project.appLive && <a href={project.appLive} target="_blank" rel="noreferrer">Open app ↗</a>}
                     <a href={project.source} target="_blank" rel="noreferrer">View code ↗</a>
                   </div>
                 </div>
@@ -288,6 +292,7 @@ export default function Home() {
             <div className="caseTags">{activeProject.stack.map((item) => <span key={item}>{item}</span>)}</div>
             <div className="caseActions">
               <a href={activeProject.live} target="_blank" rel="noreferrer">Open project ↗</a>
+              {activeProject.appLive && <a href={activeProject.appLive} target="_blank" rel="noreferrer">Open app ↗</a>}
               <a href={activeProject.source} target="_blank" rel="noreferrer">Explore code ↗</a>
             </div>
           </article>
