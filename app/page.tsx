@@ -26,7 +26,7 @@ const projects = [
     summary: "A mobile detailing platform with a three-photo Smart Vehicle Scan that extracts visible vehicle details, reduces form entry, and keeps the customer in control of sensitive information.",
     stack: ["TypeScript", "Vision API", "Structured Data", "Privacy-first UX"],
     live: "https://whipklean.tinotendadzawi.com",
-    source: "https://github.com/tinondzala26/whipklean-mobile-detailing",
+    source: "https://github.com/tinondzala26/whipklean-mobile-detailing/tree/smart-scan-app",
     className: "whip",
     metric: "03",
     metricLabel: "PHOTOS TO START A QUOTE",

@@ -4,7 +4,7 @@ Personal portfolio for Tinotenda Dzawi, a product engineer combining design, sof
 
 ## Selected work
 
-- [WhipKlean](https://whipklean.tinotendadzawi.com) — mobile detailing and consent-led vehicle photo scanning.
+- [WhipKlean](https://whipklean.tinotendadzawi.com) — mobile detailing and consent-led vehicle photo scanning. [Application source](https://github.com/tinondzala26/whipklean-mobile-detailing/tree/smart-scan-app).
 - [Bush Man](https://bushman.tinotendadzawi.com) — responsive safari-fashion commerce experience.
 - [Sa’int Lucid](https://saintlucid.online) — immersive artist and music-release platform.
 
